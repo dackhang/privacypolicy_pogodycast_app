@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chính sách & Liên hệ - TempoCastTempoCast</title>
+    <title>Chính sách & Liên hệ - TempoCast</title>
     <!-- Thư viện Tailwind CSS để tạo giao diện hiện đại và phản hồi -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Tùy chỉnh font chữ cho toàn bộ trang */
+        /* Tùy chỉnh font chữ và màu nền toàn bộ trang */
         body {
             font-family: 'Inter', sans-serif;
-            @apply bg-gray-100 text-gray-800;
+            @apply bg-gray-900 text-gray-300;
         }
         /* Tùy chỉnh màu sắc cho các nút điều hướng khi được chọn */
         .tab-btn.active {
-            @apply border-b-2 border-blue-500 text-blue-600 font-semibold;
+            @apply border-b-2 border-blue-400 text-blue-400 font-semibold;
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+<body class="bg-gray-900 min-h-screen flex items-center justify-center p-4">
 
     <!-- Container chính của trang -->
-    <div class="bg-white rounded-xl shadow-lg p-6 md:p-10 w-full max-w-4xl">
+    <div class="bg-gray-800 rounded-xl shadow-lg p-6 md:p-10 w-full max-w-4xl">
         <div class="text-center mb-8">
-            <h1 class="text-3xl font-bold text-gray-900 mb-2">Thông tin về Ứng dụng của bạn</h1>
-            <p class="text-gray-500">Chính sách Bảo mật và Liên hệ</p>
+            <h1 class="text-3xl font-bold text-gray-100 mb-2">Thông tin về Ứng dụng của bạn</h1>
+            <p class="text-gray-400">Chính sách Bảo mật và Liên hệ</p>
         </div>
         
         <!-- Thanh điều hướng (tabs) -->
-        <div class="flex border-b border-gray-200 mb-6">
-            <button id="privacy-tab" class="tab-btn active flex-1 py-3 px-4 text-center text-gray-600 transition duration-300 ease-in-out hover:bg-gray-50 focus:outline-none" onclick="showSection('privacy-policy')">
+        <div class="flex border-b border-gray-700 mb-6">
+            <button id="privacy-tab" class="tab-btn active flex-1 py-3 px-4 text-center text-gray-400 transition duration-300 ease-in-out hover:bg-gray-700 focus:outline-none" onclick="showSection('privacy-policy')">
                 Chính sách Bảo mật
             </button>
-            <button id="contact-tab" class="tab-btn flex-1 py-3 px-4 text-center text-gray-600 transition duration-300 ease-in-out hover:bg-gray-50 focus:outline-none" onclick="showSection('contact')">
+            <button id="contact-tab" class="tab-btn flex-1 py-3 px-4 text-center text-gray-400 transition duration-300 ease-in-out hover:bg-gray-700 focus:outline-none" onclick="showSection('contact')">
                 Liên hệ
             </button>
         </div>
 
         <!-- Section: Chính sách Bảo mật -->
         <div id="privacy-policy" class="section">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Chính sách Bảo mật</h2>
-            <p class="text-sm text-gray-500 mb-4">Cập nhật lần cuối: 25 tháng 8 năm 2025</p>
+            <h2 class="text-2xl font-semibold text-gray-200 mb-4">Chính sách Bảo mật</h2>
+            <p class="text-sm text-gray-400 mb-4">Cập nhật lần cuối: 25 tháng 8 năm 2025</p>
 
-            <div class="space-y-6 text-gray-700">
+            <div class="space-y-6 text-gray-300">
                 <p>Chính sách Bảo mật này mô tả cách <span class="font-bold">TempoCast</span> (sau đây gọi là "chúng tôi," "của chúng tôi") thu thập, sử dụng và tiết lộ thông tin của bạn khi bạn sử dụng ứng dụng di động hoặc trang web của chúng tôi (gọi chung là "Dịch vụ"). Bằng cách sử dụng Dịch vụ, bạn đồng ý với việc thu thập và sử dụng thông tin theo Chính sách này.</p>
 
                 <div>
@@ -65,52 +65,53 @@
                         <li>Để liên hệ với bạn về Dịch vụ hoặc các vấn đề hỗ trợ.</li>
                         <li>Để cải thiện và cá nhân hóa trải nghiệm của bạn.</li>
                         <li>Để phân tích việc sử dụng Dịch vụ và phát triển các tính năng mới.</li>
+                        <li>Để đảm bảo an toàn và bảo mật cho Dịch vụ.</li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 class="font-bold text-lg mb-1">3. Bảo mật dữ liệu</h3>
-                    <p>Chúng tôi cam kết bảo vệ thông tin của bạn. Chúng tôi sử dụng các biện pháp bảo mật hợp lý để ngăn chặn truy cập, sử dụng hoặc tiết lộ trái phép thông tin của bạn.</p>
+                    <p>Chúng tôi cam kết bảo vệ thông tin của bạn. Chúng tôi sử dụng các biện pháp bảo mật hợp lý để ngăn chặn truy cập, sử dụng hoặc tiết lộ trái phép thông tin của bạn. Tuy nhiên, xin lưu ý rằng không có phương thức truyền tải qua Internet hoặc phương pháp lưu trữ điện tử nào là an toàn tuyệt đối 100%.</p>
                 </div>
 
                 <div>
                     <h3 class="font-bold text-lg mb-1">4. Liên hệ với chúng tôi</h3>
-                    <p>Nếu bạn có bất kỳ câu hỏi nào về Chính sách Bảo mật này, vui lòng liên hệ với chúng tôi qua trang Liên hệ hoặc gửi email đến <span class="font-bold">bogamema3@gmail.com</span>.</p>
+                    <p>Nếu bạn có bất kỳ câu hỏi nào về Chính sách Bảo mật này, vui lòng liên hệ với chúng tôi qua trang Liên hệ hoặc gửi email đến <span class="font-bold">support@tempocast.com</span>.</p>
                 </div>
             </div>
         </div>
 
         <!-- Section: Liên hệ (mặc định ẩn) -->
         <div id="contact" class="section hidden">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Liên hệ</h2>
+            <h2 class="text-2xl font-semibold text-gray-200 mb-4">Liên hệ</h2>
             <div class="space-y-6">
                 <div>
-                    <h3 class="font-bold text-lg mb-1 text-gray-800">Thông tin liên hệ</h3>
-                    <p class="text-gray-700">Email: <span class="font-bold text-blue-600"><a href="mailto:[Email liên hệ của bạn]" class="hover:underline">bogamema3@gmail.com</a></span></p>
-                    <p class="text-gray-700">Địa chỉ: <span class="font-bold">Bắc Ninh, Việt Nam</span></p>
+                    <h3 class="font-bold text-lg mb-1 text-gray-200">Thông tin liên hệ</h3>
+                    <p class="text-gray-300">Email: <span class="font-bold text-blue-400"><a href="mailto:[Email liên hệ của bạn]" class="hover:underline">support@tempocast.com</a></span></p>
+                    <p class="text-gray-300">Địa chỉ: <span class="font-bold">Bac Ninh, Viet Nam</span></p>
                 </div>
                 
-                <h3 class="font-bold text-lg mb-2 text-gray-800">Hoặc gửi tin nhắn cho chúng tôi</h3>
+                <h3 class="font-bold text-lg mb-2 text-gray-200">Hoặc gửi tin nhắn cho chúng tôi</h3>
                 <!-- Form liên hệ đơn giản (không có chức năng backend) -->
                 <form action="mailto:[Email liên hệ của bạn]" method="post" enctype="text/plain" class="space-y-4">
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700">Tên của bạn</label>
-                        <input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        <label for="name" class="block text-sm font-medium text-gray-300">Tên của bạn</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm bg-gray-700 text-white focus:outline-none focus:ring-blue-400 focus:border-blue-400 sm:text-sm">
                     </div>
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700">Email của bạn</label>
-                        <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                        <label for="email" class="block text-sm font-medium text-gray-300">Email của bạn</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm bg-gray-700 text-white focus:outline-none focus:ring-blue-400 focus:border-blue-400 sm:text-sm">
                     </div>
                     <div>
-                        <label for="message" class="block text-sm font-medium text-gray-700">Nội dung</label>
-                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+                        <label for="message" class="block text-sm font-medium text-gray-300">Nội dung</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm bg-gray-700 text-white focus:outline-none focus:ring-blue-400 focus:border-blue-400 sm:text-sm"></textarea>
                     </div>
                     <div class="text-right">
-                        <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400">
                             Gửi tin nhắn
                         </button>
                     </div>
-                    <p class="text-xs text-red-500 mt-2">Lưu ý: Form này sử dụng `mailto`, có thể không hoạt động trên một số trình duyệt và sẽ mở ứng dụng email mặc định của bạn.</p>
+                    <p class="text-xs text-red-400 mt-2">Lưu ý: Form này sử dụng `mailto`, có thể không hoạt động trên một số trình duyệt và sẽ mở ứng dụng email mặc định của bạn.</p>
                 </form>
             </div>
         </div>
