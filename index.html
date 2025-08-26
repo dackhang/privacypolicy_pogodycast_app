@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chính sách & Liên hệ - TempoCast</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: rgba(255, 255, 255, 0.08);
+      --card-strong: rgba(255, 255, 255, 0.12);
+      --text: #eaf2ff;
+      --text-dim: #b8c4e0;
+      --brand: #7c8cff;
+      --brand-2: #e38dfc;
+      --brand-3: #8be9a0;
+      --muted: #94a3b8;
+      --shadow: 0 12px 40px rgba(0, 0, 0, .35);
+      --radius: 16px;
+      --radius-sm: 12px;
+      --maxw: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    #bg-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background: radial-gradient(1000px 700px at 20% -10%, rgba(124, 140, 255, .16), transparent 60%),
+        radial-gradient(800px 600px at 110% 20%, rgba(227, 141, 252, .12), transparent 60%),
+        radial-gradient(1000px 700px at 30% 120%, rgba(139, 233, 160, .10), transparent 60%),
+        radial-gradient(800px 500px at 80% 80%, rgba(148, 163, 184, .08), transparent 60%);
+      filter: saturate(110%);
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      max-width: var(--maxw);
+      margin: 64px auto;
+      padding: 0 20px;
+    }
+
+    header.hero {
+      background: linear-gradient(180deg, rgba(255, 255, 255, .10), rgba(255, 255, 255, .06));
+      border: 1px solid rgba(255, 255, 255, .12);
+      backdrop-filter: blur(8px);
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(26px, 4vw, 34px);
+      font-weight: 800;
+    }
+
+    .hero p {
+      margin-top: 8px;
+      color: var(--text-dim);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, .10);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-top: 24px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--brand);
+      margin-bottom: 12px;
+    }
+
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid rgba(255, 255, 255, .15);
+      margin-bottom: 20px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 12px;
+      cursor: pointer;
+      text-align: center;
+      color: var(--text-dim);
+      border: none;
+      background: transparent;
+      font-size: 15px;
+    }
+
+    .tab-btn.active {
+      color: var(--brand-2);
+      border-bottom: 2px solid var(--brand-2);
+      font-weight: 600;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin: 8px 0;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, .15);
+      background: rgba(255, 255, 255, .05);
+      color: var(--text);
+      margin-top: 6px;
+      font-family: inherit;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--brand-2);
+    }
+
+    button.send {
+      margin-top: 12px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      border: none;
+      background: linear-gradient(180deg, rgba(227, 141, 252, .3), rgba(227, 141, 252, .15));
+      border: 1px solid rgba(227, 141, 252, .35);
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    button.send:hover {
+      opacity: .85;
+    }
+
+    .footnote {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      margin: 28px 0 0;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <main class="wrap">
+    <header class="hero">
+      <h1>TempoCast</h1>
+      <p>Chính sách Bảo mật & Liên hệ</p>
+    </header>
+
+    <section class="card">
+      <div class="tabs">
+        <button id="privacy-tab" class="tab-btn active" onclick="showSection('privacy')">Chính sách Bảo mật</button>
+        <button id="contact-tab" class="tab-btn" onclick="showSection('contact')">Liên hệ</button>
+      </div>
+
+      <!-- Privacy -->
+      <div id="privacy" class="section active">
+        <h2 class="section-title">Chính sách Bảo mật</h2>
+        <p style="color:var(--text-dim);font-size:14px;">Cập nhật lần cuối: 25 tháng 8 năm 2025</p>
+        <p>Chính sách Bảo mật này mô tả cách <strong>TempoCast</strong> thu thập, sử dụng và tiết lộ thông tin của bạn khi bạn sử dụng ứng dụng hoặc trang web của chúng tôi.</p>
+        <h3>1. Thông tin thu thập</h3>
+        <ul>
+          <li>Thông tin bạn cung cấp trực tiếp (tên, email,...)</li>
+          <li>Thông tin thu thập tự động (IP, loại thiết bị,...)</li>
+        </ul>
+        <h3>2. Cách sử dụng</h3>
+        <ul>
+          <li>Cung cấp và duy trì dịch vụ</li>
+          <li>Liên hệ hỗ trợ</li>
