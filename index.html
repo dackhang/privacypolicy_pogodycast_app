@@ -345,6 +345,12 @@
         "_blank"
       );
     });
+
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // chặn reload
+      form.reset();
+    });
   </script>
 </body>
 </html>
